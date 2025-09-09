@@ -1,0 +1,102 @@
+"NeverWorld2"
+1 1 1 0 0 0
+"snapshots%8dy",     5, "days", 1, "days", "time",  500, "days"
+"averages%8dy",      5, "days", 1, "days", "time", 500, "days"
+#"MMT_fields%8dy",    500, "days", 1, "days", "time", 500, "days"
+"static",            -1, "days", 1, "days", "time",
+
+# Prognostic snapshots:
+ "ocean_model", "u",           "u",           "snapshots%8dy", "all", "none", "none", 2
+ "ocean_model", "v",           "v",           "snapshots%8dy", "all", "none", "none", 2
+ "ocean_model", "h",           "h",           "snapshots%8dy", "all", "none", "none", 2
+# "ocean_model", "MEKE",        "MEKE",        "snapshots%8dy", "all", "none", "none", 2
+# "ocean_model", "tracer01",    "tracer01",    "snapshots%8dy", "all", "none", "none", 2
+# "ocean_model", "tracer02",    "tracer02",    "snapshots%8dy", "all", "none", "none", 2
+# "ocean_model", "tracer03",    "tracer03",    "snapshots%8dy", "all", "none", "none", 2
+# "ocean_model", "tracer04",    "tracer04",    "snapshots%8dy", "all", "none", "none", 2
+# "ocean_model", "tracer05",    "tracer05",    "snapshots%8dy", "all", "none", "none", 2
+# "ocean_model", "tracer06",    "tracer06",    "snapshots%8dy", "all", "none", "none", 2
+# "ocean_model", "tracer07",    "tracer07",    "snapshots%8dy", "all", "none", "none", 2
+# "ocean_model", "tracer08",    "tracer08",    "snapshots%8dy", "all", "none", "none", 2
+# "ocean_model", "tracer09",    "tracer09",    "snapshots%8dy", "all", "none", "none", 2
+# "ocean_model", "dye001",      "dye",         "snapshots%8dy", "all", "none", "none", 2
+
+# Averages: 
+ "ocean_model", "h",           "h",           "averages%8dy", "all", "mean", "none", 2
+ "ocean_model", "dye001",      "dye",         "averages%8dy", "all", "mean", "none", 2
+
+# MMT fields
+# "ocean_model", "h",               "h",               "MMT_fields%8dy", "all", "mean", "none", 2
+# "ocean_model", "uh",              "uh",              "MMT_fields%8dy", "all", "mean", "none", 2
+# "ocean_model", "vh",              "vh",              "MMT_fields%8dy", "all", "mean", "none", 2
+# "ocean_model", "tracer01h",       "tracer01h",       "MMT_fields%8dy", "all", "mean", "none", 2
+# "ocean_model", "tracer01_adx",    "tracer01_adx",    "MMT_fields%8dy", "all", "mean", "none", 2
+# "ocean_model", "tracer01_ady",    "tracer01_ady",    "MMT_fields%8dy", "all", "mean", "none", 2
+# "ocean_model", "tracer02h",       "tracer02h",       "MMT_fields%8dy", "all", "mean", "none", 2
+# "ocean_model", "tracer02_adx",    "tracer02_adx",    "MMT_fields%8dy", "all", "mean", "none", 2
+# "ocean_model", "tracer02_ady",    "tracer02_ady",    "MMT_fields%8dy", "all", "mean", "none", 2
+# "ocean_model", "tracer04h",       "tracer04h",       "MMT_fields%8dy", "all", "mean", "none", 2
+# "ocean_model", "tracer04_adx",    "tracer04_adx",    "MMT_fields%8dy", "all", "mean", "none", 2
+# "ocean_model", "tracer04_ady",    "tracer04_ady",    "MMT_fields%8dy", "all", "mean", "none", 2
+# "ocean_model", "tracer05h",       "tracer05h",       "MMT_fields%8dy", "all", "mean", "none", 2
+# "ocean_model", "tracer05_adx",    "tracer05_adx",    "MMT_fields%8dy", "all", "mean", "none", 2
+# "ocean_model", "tracer05_ady",    "tracer05_ady",    "MMT_fields%8dy", "all", "mean", "none", 2
+# "ocean_model", "tracer07h",       "tracer07h",       "MMT_fields%8dy", "all", "mean", "none", 2
+# "ocean_model", "tracer07_adx",    "tracer07_adx",    "MMT_fields%8dy", "all", "mean", "none", 2
+# "ocean_model", "tracer07_ady",    "tracer07_ady",    "MMT_fields%8dy", "all", "mean", "none", 2
+# "ocean_model", "tracer08h",       "tracer08h",       "MMT_fields%8dy", "all", "mean", "none", 2
+# "ocean_model", "tracer08_adx",    "tracer08_adx",    "MMT_fields%8dy", "all", "mean", "none", 2
+# "ocean_model", "tracer08_ady",    "tracer08_ady",    "MMT_fields%8dy", "all", "mean", "none", 2
+
+# Static variables:
+ "ocean_model", "geolon",      "geolon",      "static", "all", .false., "none", 2
+ "ocean_model", "geolat",      "geolat",      "static", "all", .false., "none", 2
+ "ocean_model", "geolon_c",    "geolon_c",    "static", "all", .false., "none", 2
+ "ocean_model", "geolat_c",    "geolat_c",    "static", "all", .false., "none", 2
+ "ocean_model", "geolon_u",    "geolon_u",    "static", "all", .false., "none", 2
+ "ocean_model", "geolat_u",    "geolat_u",    "static", "all", .false., "none", 2
+ "ocean_model", "geolon_v",    "geolon_v",    "static", "all", .false., "none", 2
+ "ocean_model", "geolat_v",    "geolat_v",    "static", "all", .false., "none", 2
+ "ocean_model", "area_t",      "area_t",      "static", "all", .false., "none", 2
+ "ocean_model", "area_u",      "area_u",      "static", "all", .false., "none", 2
+ "ocean_model", "area_v",      "area_v",      "static", "all", .false., "none", 2
+ "ocean_model", "dyCu",        "dyCu",        "static", "all", .false., "none", 2
+ "ocean_model", "dxCv",        "dxCv",        "static", "all", .false., "none", 2
+ "ocean_model", "dxCu",        "dxCu",        "static", "all", .false., "none", 2
+ "ocean_model", "dyCv",        "dyCv",        "static", "all", .false., "none", 2
+ "ocean_model", "depth_ocean", "depth_ocean", "static", "all", .false., "none", 2
+ "ocean_model", "wet",         "wet",         "static", "all", .false., "none", 2
+ "ocean_model", "wet_c",       "wet_c",       "static", "all", .false., "none", 2
+ "ocean_model", "wet_u",       "wet_u",       "static", "all", .false., "none", 2
+ "ocean_model", "wet_v",       "wet_v",       "static", "all", .false., "none", 2
+ "ocean_model", "Coriolis",    "Coriolis",    "static", "all", .false., "none", 2
+
+#  FORMATS FOR FILE ENTRIES (not all input values are used)
+#  ------------------------
+#
+#"file_name", output_freq, "output_units", format, "time_units", "time_long_name", ...
+#   (opt) new_file_frequecy, (opt) "new_file_freq_units", "new_file_start_date"
+#
+#
+#output_freq:  > 0  output frequency in "output_units"
+#              = 0  output frequency every time step
+#              =-1  output frequency at end of run
+#
+#output_units = units used for output frequency
+#               (years, months, days, minutes, hours, seconds)
+#
+#time_units   = units used to label the time axis
+#               (days, minutes, hours, seconds)
+#
+#
+#  FORMAT FOR FIELD ENTRIES (not all input values are used)
+#  ------------------------
+#
+#"module_name", "field_name", "output_name", "file_name" "time_sampling", time_avg, "other_opts", packing
+#
+#time_avg = .true. or .false.
+#
+#packing  = 1  double precision
+#         = 2  float
+#         = 4  packed 16-bit integers
+#         = 8  packed 1-byte (not tested?)

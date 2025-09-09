@@ -1,0 +1,60 @@
+NIGLOBAL = 240
+NJGLOBAL = 560
+DT = 750.
+
+RESTART_CHECKSUMS_REQUIRED = False
+ENERGYFILE = "ocean.stats"
+
+! === module MOM_diag_mediator ===
+DIAG_COODS  = "z Z ZSTAR"
+DIAG_COORD_DEF_Z = "PARAM"
+DIAG_COORD_RES_Z = 5.0, 10.0, 20.0, 50.0, 100.0, 3815.0 ! [m]
+
+! === module nw2_tracers ===
+
+USE_NW2_TRACERS = True                  !   [Boolean] default = False
+                                        ! If true, use the NeverWorld2 tracers.
+NW2_TRACER_GROUPS = 2                   ! default = 3
+                                        ! The number of tracer groups where a group is of four tracers initialized and
+                                        ! restored to sin(2*pi*x), cos(2*pi*x), y and cos(pi*y), respectively. Each group is restored with an
+                                        ! independent restoration rate.
+NW2_TRACER_RESTORE_TIMESCALE = 730.0, 2190.0    !   [days]
+                                        ! A list of timescales, one for each tracer group.
+
+! === module MOM_lateral_mixing_coeffs ===
+USE_VARIABLE_MIXING = True      !   [Boolean] default = False
+                                ! If true, the variable mixing code will be called.  This allows diagnostics to
+                                ! be created even if the scheme is not used.  If KHTR_SLOPE_CFF>0 or
+                                ! KhTh_Slope_Cff>0, this is set to true regardless of what is in the parameter
+                                ! file.
+RESOLN_SCALED_KHTR = True       !   [Boolean] default = False
+                                ! If true, the epipycnal tracer diffusivity is scaled away when the first
+                                ! baroclinic deformation radius is well resolved.
+KH_RES_SCALE_COEF = 0.7071      !   [nondim] default = 1.0
+                                ! A coefficient that determines how KhTh is scaled away if RESOLN_SCALED_... is
+                                ! true, as F = 1 / (1 + (KH_RES_SCALE_COEF*Rd/dx)^KH_RES_FN_POWER).
+KH_RES_FN_POWER = 100           ! default = 2
+                                ! The power of dx/Ld in the Kh resolution function.  Any positive integer may be
+                                ! used, although even integers are more efficient to calculate.  Setting this
+                                ! greater than 100 results in a step-function being used.
+KHTR_USE_EBT_STRUCT = True      !   [Boolean] default = False
+                                ! If true, uses the equivalent barotropic structure as the vertical structure of
+                                ! tracer diffusivity.
+KHTR = 2400.0                    !   [m2 s-1] default = 0.0
+                                ! The background along-isopycnal tracer diffusivity.
+
+! === module regional_dyes ===
+
+USE_REGIONAL_DYES = True            ! [Boolean] default = False
+                                    !! If true, use the regional_dyes tracer package.
+NUM_DYE_TRACERS = 1                 ! The number of dye tracers in this run. [integer]
+DYE_SOURCE_MINLON = 0.0             ! Minimum longitude of region dye will be
+                                    !! injected, in [m] or [km] or [degrees_E]
+DYE_SOURCE_MAXLON = 60.0            ! Maximum longitude of region dye will be
+                                    !! injected, in [m] or [km] or [degrees_E]
+DYE_SOURCE_MINLAT = -70.0           ! Minimum latitude of region dye will be
+                                    !! injected, in [m] or [km] or [degrees_N]
+DYE_SOURCE_MAXLAT = 70.0            ! Maximum latitude of region dye will be
+                                    !! injected, in [m] or [km] or [degrees_N]
+DYE_SOURCE_MINDEPTH = -100.0        ! Minimum depth of region dye will be injected [Z ~> m]
+DYE_SOURCE_MAXDEPTH = 100.0          ! Maximum depth of region dye will be injected [Z ~> m]
